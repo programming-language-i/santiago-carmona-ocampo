@@ -61,7 +61,6 @@ for i in range(3):
     hilo.join()
 print(f"{time.perf_counter() - inicio:.1f} s")
 ```
-
 ### B2. Daemon con `finally`
 
 ```python
