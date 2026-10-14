@@ -5,8 +5,6 @@ def enviar_mensaje(sock: socket.socket, mensaje: str) -> None:
     """
     Sirve para enviar un mensaje de texto mediante un socket TCP.
 
-    El mensaje se codifica en UTF-8 y se envía con un prefijo
-    de 4 bytes que indica la longitud del cuerpo.
     """
     cuerpo = mensaje.encode("utf-8")
 
@@ -20,9 +18,7 @@ def enviar_mensaje(sock: socket.socket, mensaje: str) -> None:
 def recibir_exacto(sock: socket.socket, cantidad: int) -> bytes | None:
     """
     Recibe exactamente la cantidad de bytes solicitada.
-
-    Devuelve None si el otro extremo cierra la conexión antes
-    de completar la lectura.
+    
     """
     datos = bytearray()
 
