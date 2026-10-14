@@ -3,7 +3,7 @@ import socket
 
 def enviar_mensaje(sock: socket.socket, mensaje: str) -> None:
     """
-    Envía un mensaje de texto mediante un socket TCP.
+    Sirve para enviar un mensaje de texto mediante un socket TCP.
 
     El mensaje se codifica en UTF-8 y se envía con un prefijo
     de 4 bytes que indica la longitud del cuerpo.
